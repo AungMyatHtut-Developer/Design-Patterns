@@ -10,6 +10,7 @@ public class Parrot extends Bird{
         singingBehavior = new SingingNoWay();
         speakingBehavior = new Speaking();
         swimmingBehavior = new SwimmingNowWay();
+        chirpBehavior = new Screaming();
     }
 
     public void display() {

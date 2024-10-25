@@ -11,6 +11,7 @@ public class Nightingale extends Bird{
         singingBehavior = new Singing();
         speakingBehavior = new SpeakingNoWay();
         swimmingBehavior = new SwimmingNowWay();
+        chirpBehavior = new Chirping();
     }
 
 

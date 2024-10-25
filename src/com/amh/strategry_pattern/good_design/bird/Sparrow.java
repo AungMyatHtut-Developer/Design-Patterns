@@ -11,6 +11,7 @@ public class Sparrow extends Bird{
         singingBehavior = new SingingNoWay();
         speakingBehavior = new SpeakingNoWay();
         swimmingBehavior = new SwimmingNowWay();
+        chirpBehavior = new Chirping();
     }
 
     public void display() {

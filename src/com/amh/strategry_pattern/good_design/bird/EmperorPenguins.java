@@ -11,6 +11,7 @@ public class EmperorPenguins extends Bird {
         singingBehavior = new SingingNoWay();
         speakingBehavior = new SpeakingNoWay();
         swimmingBehavior = new Swimming();
+        chirpBehavior = new Screaming();
     }
 
     public void display() {

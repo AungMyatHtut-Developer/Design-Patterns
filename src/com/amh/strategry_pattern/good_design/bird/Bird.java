@@ -9,6 +9,7 @@ public class Bird {
     SingingBehavior singingBehavior;
     SpeakingBehavior speakingBehavior;
     SwimmingBehavior swimmingBehavior;
+    ChirpBehavior chirpBehavior;
 
     public void display() {
         System.out.println("Bird...");
@@ -32,6 +33,14 @@ public class Bird {
 
     public void swim() {
         swimmingBehavior.swim();
+    }
+
+    public void makeVoice() {
+        chirpBehavior.chirp();
+    }
+
+    public ChirpBehavior getChirpBehavior() {
+        return chirpBehavior;
     }
 
     public void setSingingBehavior(SingingBehavior singingBehavior) {
