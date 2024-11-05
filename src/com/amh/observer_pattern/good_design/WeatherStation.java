@@ -1,12 +1,14 @@
 package com.amh.observer_pattern.good_design;
 
 import com.amh.observer_pattern.good_design.display.CurrentConditionDisplay;
+import com.amh.observer_pattern.good_design.display.WeatherForecastDisplay;
 
 public class WeatherStation {
     public static void main(String[] args) throws InterruptedException {
         WeatherData weatherData = new WeatherData();
 
         CurrentConditionDisplay currentConditionDisplay = new CurrentConditionDisplay(weatherData);
+        WeatherForecastDisplay weatherForecastDisplay = new WeatherForecastDisplay(weatherData);
 
         weatherData.setMeasurements(80, 65, 30.4f);
         Thread.sleep(1000);

@@ -1,6 +1,5 @@
 package com.amh.observer_pattern.good_design.display;
 
-import com.amh.observer_pattern.good_design.DisplayElement;
 import com.amh.observer_pattern.good_design.Observer;
 import com.amh.observer_pattern.good_design.WeatherData;
 
@@ -16,14 +15,14 @@ public class CurrentConditionDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void display() {
-        System.out.println("Current Conditions : "+ temperature +" F degrees and "+ humidity +" % humidity.");
+    public void update() {
+        this.temperature = weatherData.getTemperature();
+        this.humidity = weatherData.getHumidity();
+        display();
     }
 
     @Override
-    public void update(float temp, float humidity, float pressure) {
-        this.temperature = temp;
-        this.humidity = humidity;
-        display();
+    public void display() {
+        System.out.println("Current Conditions : "+ temperature +" F degrees and "+ humidity +" % humidity.");
     }
 }
